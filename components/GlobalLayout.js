@@ -1,0 +1,68 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Navbar from "@/components/user_dash/Navbar";
+import Footer from "@/components/user_dash/Footer";
+import Image from "next/image";
+import { Montserrat } from 'next/font/google'
+const montserrat = Montserrat({ subsets: ["latin"], weight: ['500']})
+
+export default function GlobalLayout({ children }) {
+  const pathname = usePathname();
+  const specialRoutes = [
+    '/adm-dashboard',
+    '/user-dashboard',
+    '/contact',
+    '/resources',
+    '/event',
+    '/about',
+    '/'
+  ];
+  const isSpecialPage = specialRoutes.some((route) => {
+    if (route === '/') {
+      return pathname === '/';
+    }
+    return pathname?.startsWith(route);
+  });
+
+  if (isSpecialPage) {
+    // Special layout
+    return (
+      <>
+        <Navbar />
+        <main className="min-h-screen pt-20">
+          {children}
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  // Default layout
+  return (
+    <>
+      <header className={`${montserrat.className} flex items-center justify-between gap-4 p-4 sm:p-8`}>
+        <div className="flex items-center gap-3">
+          <div>
+            <Image src={'/uit_logo.png'} width={70} height={70} alt={'uit_logo'} />
+          </div>
+          <div>
+            <h1 className="mt-1 text-lg my-auto sm:text-xl md:text-2xl text-gradient-dark-bg-3 leading-none">
+              UIT Coding Club
+            </h1>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-4">
+          {/* Theme toggle removed */}
+        </div>
+      </header>
+
+      {children}
+      <footer className="p-4 sm:p-8">
+        <p className={`text-center mx-auto text-gray-600`}>Created by HAK Dynamics</p>
+      </footer>
+    </>
+  );
+} 
