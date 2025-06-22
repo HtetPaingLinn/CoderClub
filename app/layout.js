@@ -10,6 +10,11 @@ const lexend = Lexend({ subsets: ['latin'], display: 'swap', variable: '--font-l
 
 export const metadata = {
   title: "UIT Coding Club",
+  icons: {
+    icon: '/logo2.png',
+    shortcut: '/logo2.png',
+    apple: '/logo2.png',
+  },
 };
 
 export default function RootLayout({ children }) {
