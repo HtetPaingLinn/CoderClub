@@ -525,6 +525,58 @@ export default function About() {
         </div>
       </section>
 
+      {/* Web Builders Section */}
+      <section className="section bg-gradient-to-br from-[#f8faf8] to-[#e8f0f0] py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl font-bold mb-2 text-gray-800">Our Web Builders</h2>
+            <div className="inline-block w-24 h-1 bg-[#387d8a]"></div>
+          </div>
+          
+          <div className="relative flex flex-col md:flex-row justify-center items-center gap-y-28 md:gap-x-4 h-auto md:h-[400px]">
+
+            {/* Htet Myet Zaw */}
+            <div className="relative transform md:-rotate-6">
+              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-max text-center">
+                <h3 className="text-xl font-bold text-gray-800">Htet Myet Zaw</h3>
+                <span className="px-3 py-1 mt-1 inline-block text-sm font-semibold text-white bg-gray-500 rounded-md shadow-md">Full-Stack Development Lead</span>
+              </div>
+              <div className="bg-white p-3 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <img src="/htetmyetzaw.jpg" alt="Htet Myet Zaw" className="w-52 h-64 object-cover rounded-md" />
+              </div>
+            </div>
+
+            {/* Htet Paing Linn */}
+            <div className="relative md:scale-110 z-10 order-first md:order-none">
+              <div className="bg-white p-3 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <img src="/vp.png" alt="Htet Paing Linn" className="w-56 h-72 object-cover rounded-md" />
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="text-xl font-bold text-gray-800">Htet Paing Linn</h3>
+                <span className="px-3 py-1 mt-1 inline-block text-sm font-semibold text-white bg-green-700 rounded-md shadow-md">Vice President</span>
+              </div>
+            </div>
+
+            {/* Aung Kaung Myat */}
+            <div className="relative transform md:rotate-6">
+              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-max text-center">
+                <h3 className="text-xl font-bold text-gray-800">Aung Kaung Myat</h3>
+                <span className="px-3 py-1 mt-1 inline-block text-sm font-semibold text-white bg-purple-600 rounded-md shadow-md">Creation Hub Head</span>
+              </div>
+              <div className="bg-white p-3 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <img src="/aungkaungmyat.jpg" alt="Aung Kaung Myat" className="w-52 h-64 object-cover object-top rounded-md" />
+              </div>
+            </div>
+
+          </div>
+
+          <div className="text-center mt-28 md:mt-20">
+            <p className="text-3xl font-bold tracking-wider text-gray-700">HAK DYNAMIC</p>
+            <p className="text-gray-500 mt-1">software house</p>
+          </div>
+        </div>
+      </section>
+
       {/* Join Section */}
       <section className="section bg-gray-50 my-14">
         <div className="container text-center">
